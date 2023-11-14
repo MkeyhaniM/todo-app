@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux modules/app.hooks";
 import {
   addTask,
@@ -15,7 +15,7 @@ interface TodoProps {
 function Todo({ client }: TodoProps) {
   const [getTask, setGetTask] = useState<string>("");
   const todoSele = useAppSelector((state: any) => state.todo);
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   function getDone(e: any): boolean {
     if (e.isDone) return true;
@@ -24,7 +24,7 @@ function Todo({ client }: TodoProps) {
 
   useEffect(() => {
     dispatch(anotherClient());
-  }, [client]);
+  }, [client, dispatch]);
 
   const ItrateBetweenState = todoSele.map((e: any) => {
     function getChackBox(e: any): boolean {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Todo from "../todo/todo";
 import { clientState } from "../../state/clientState";
 

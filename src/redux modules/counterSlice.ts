@@ -68,7 +68,9 @@ const todoList = createSlice({
         return todo;
       });
     },
-    anotherClient: (state: TodoState, action: PayloadAction) => {
+
+    anotherClient: () => {
+      // state: TodoState, action: PayloadAction
       return [...initialState];
     },
   },
